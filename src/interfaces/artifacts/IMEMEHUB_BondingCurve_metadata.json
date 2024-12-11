@@ -1,0 +1,150 @@
+{
+	"compiler": {
+		"version": "0.8.25+commit.b61c2a91"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "initAmountIn",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address[]",
+						"name": "referrers",
+						"type": "address[]"
+					},
+					{
+						"internalType": "string[]",
+						"name": "_infos",
+						"type": "string[]"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "_params",
+						"type": "uint256[]"
+					}
+				],
+				"name": "createToken",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					}
+				],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "creationFee_",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amountIn",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amountOutMin",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "deadline",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address[]",
+						"name": "referrers",
+						"type": "address[]"
+					}
+				],
+				"name": "mint",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "amountOut",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "versions",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contract_meme_hub_wen/contracts/interfaces/IMEMEHUB_BondingCurve.sol": "IMEMEHUB_BondingCurve"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contract_meme_hub_wen/contracts/interfaces/IMEMEHUB_BondingCurve.sol": {
+			"keccak256": "0xe9ba71b3c691b595563dcfe51d4207f0ffef6f8bbd9349e1dd4f7face71ef30e",
+			"license": "BUSL-1.1",
+			"urls": [
+				"bzz-raw://6d2ac17db767a04f9c97181aba5217aafca22e692cbf5bbb463ce76bc6a5addf",
+				"dweb:/ipfs/QmS9Js7XM5agYy8yoqcBbpsc1S4bSfKRSgNkBACK647kN5"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,546 @@
+{
+	"compiler": {
+		"version": "0.8.19+commit.7dd6d404"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "spender",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					}
+				],
+				"name": "Approval",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					}
+				],
+				"name": "Transfer",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "spender",
+						"type": "address"
+					}
+				],
+				"name": "allowance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "spender",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					}
+				],
+				"name": "approve",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "spender",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					}
+				],
+				"name": "approveAndCall",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "spender",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					}
+				],
+				"name": "approveAndCall",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "balanceOf",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes4",
+						"name": "interfaceId",
+						"type": "bytes4"
+					}
+				],
+				"name": "supportsInterface",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "totalSupply",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					}
+				],
+				"name": "transfer",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					}
+				],
+				"name": "transferAndCall",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					}
+				],
+				"name": "transferAndCall",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					}
+				],
+				"name": "transferFrom",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					}
+				],
+				"name": "transferFromAndCall",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					}
+				],
+				"name": "transferFromAndCall",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"details": "Interface of the ERC-1363 standard as defined in the https://eips.ethereum.org/EIPS/eip-1363[ERC-1363]. Defines an extension interface for ERC-20 tokens that supports executing code on a recipient contract after `transfer` or `transferFrom`, or code on a spender contract after `approve`, in a single transaction.",
+			"events": {
+				"Approval(address,address,uint256)": {
+					"details": "Emitted when the allowance of a `spender` for an `owner` is set by a call to {approve}. `value` is the new allowance."
+				},
+				"Transfer(address,address,uint256)": {
+					"details": "Emitted when `value` tokens are moved from one account (`from`) to another (`to`). Note that `value` may be zero."
+				}
+			},
+			"kind": "dev",
+			"methods": {
+				"allowance(address,address)": {
+					"details": "Returns the remaining number of tokens that `spender` will be allowed to spend on behalf of `owner` through {transferFrom}. This is zero by default. This value changes when {approve} or {transferFrom} are called."
+				},
+				"approve(address,uint256)": {
+					"details": "Sets a `value` amount of tokens as the allowance of `spender` over the caller's tokens. Returns a boolean value indicating whether the operation succeeded. IMPORTANT: Beware that changing an allowance with this method brings the risk that someone may use both the old and the new allowance by unfortunate transaction ordering. One possible solution to mitigate this race condition is to first reduce the spender's allowance to 0 and set the desired value afterwards: https://github.com/ethereum/EIPs/issues/20#issuecomment-263524729 Emits an {Approval} event."
+				},
+				"approveAndCall(address,uint256)": {
+					"details": "Sets a `value` amount of tokens as the allowance of `spender` over the caller's tokens and then calls {IERC1363Spender-onApprovalReceived} on `spender`.",
+					"params": {
+						"spender": "The address which will spend the funds.",
+						"value": "The amount of tokens to be spent."
+					},
+					"returns": {
+						"_0": "A boolean value indicating whether the operation succeeded unless throwing."
+					}
+				},
+				"approveAndCall(address,uint256,bytes)": {
+					"details": "Sets a `value` amount of tokens as the allowance of `spender` over the caller's tokens and then calls {IERC1363Spender-onApprovalReceived} on `spender`.",
+					"params": {
+						"data": "Additional data with no specified format, sent in call to `spender`.",
+						"spender": "The address which will spend the funds.",
+						"value": "The amount of tokens to be spent."
+					},
+					"returns": {
+						"_0": "A boolean value indicating whether the operation succeeded unless throwing."
+					}
+				},
+				"balanceOf(address)": {
+					"details": "Returns the value of tokens owned by `account`."
+				},
+				"supportsInterface(bytes4)": {
+					"details": "Returns true if this contract implements the interface defined by `interfaceId`. See the corresponding https://eips.ethereum.org/EIPS/eip-165#how-interfaces-are-identified[ERC section] to learn more about how these ids are created. This function call must use less than 30 000 gas."
+				},
+				"totalSupply()": {
+					"details": "Returns the value of tokens in existence."
+				},
+				"transfer(address,uint256)": {
+					"details": "Moves a `value` amount of tokens from the caller's account to `to`. Returns a boolean value indicating whether the operation succeeded. Emits a {Transfer} event."
+				},
+				"transferAndCall(address,uint256)": {
+					"details": "Moves a `value` amount of tokens from the caller's account to `to` and then calls {IERC1363Receiver-onTransferReceived} on `to`.",
+					"params": {
+						"to": "The address which you want to transfer to.",
+						"value": "The amount of tokens to be transferred."
+					},
+					"returns": {
+						"_0": "A boolean value indicating whether the operation succeeded unless throwing."
+					}
+				},
+				"transferAndCall(address,uint256,bytes)": {
+					"details": "Moves a `value` amount of tokens from the caller's account to `to` and then calls {IERC1363Receiver-onTransferReceived} on `to`.",
+					"params": {
+						"data": "Additional data with no specified format, sent in call to `to`.",
+						"to": "The address which you want to transfer to.",
+						"value": "The amount of tokens to be transferred."
+					},
+					"returns": {
+						"_0": "A boolean value indicating whether the operation succeeded unless throwing."
+					}
+				},
+				"transferFrom(address,address,uint256)": {
+					"details": "Moves a `value` amount of tokens from `from` to `to` using the allowance mechanism. `value` is then deducted from the caller's allowance. Returns a boolean value indicating whether the operation succeeded. Emits a {Transfer} event."
+				},
+				"transferFromAndCall(address,address,uint256)": {
+					"details": "Moves a `value` amount of tokens from `from` to `to` using the allowance mechanism and then calls {IERC1363Receiver-onTransferReceived} on `to`.",
+					"params": {
+						"from": "The address which you want to send tokens from.",
+						"to": "The address which you want to transfer to.",
+						"value": "The amount of tokens to be transferred."
+					},
+					"returns": {
+						"_0": "A boolean value indicating whether the operation succeeded unless throwing."
+					}
+				},
+				"transferFromAndCall(address,address,uint256,bytes)": {
+					"details": "Moves a `value` amount of tokens from `from` to `to` using the allowance mechanism and then calls {IERC1363Receiver-onTransferReceived} on `to`.",
+					"params": {
+						"data": "Additional data with no specified format, sent in call to `to`.",
+						"from": "The address which you want to send tokens from.",
+						"to": "The address which you want to transfer to.",
+						"value": "The amount of tokens to be transferred."
+					},
+					"returns": {
+						"_0": "A boolean value indicating whether the operation succeeded unless throwing."
+					}
+				}
+			},
+			"title": "IERC1363",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"lib/openzeppelin-contracts/contracts/interfaces/IERC1363.sol": "IERC1363"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"lib/openzeppelin-contracts/contracts/interfaces/IERC1363.sol": {
+			"keccak256": "0xa0bde69aaea348ad4b01f4813580bfd1739aae3e7d67bb8bfa1fa51158571f0a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://cd299bd27b8d00cf449eea4bbd60ffcba9d9611d997d6c9d069b20591331dddb",
+				"dweb:/ipfs/QmbePywaV7342zrxgrjZcHuPU6CYBoqsb84KmpEpizCkrv"
+			]
+		},
+		"lib/openzeppelin-contracts/contracts/interfaces/IERC165.sol": {
+			"keccak256": "0xaae7a768248603dde02c0d511ad19218c9ac597a6c29878bd4ff8d9004f39654",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://56ee3ed6eb50573f5208bebc8293ddbb3ab5b978565967307f57a76d047d086a",
+				"dweb:/ipfs/QmSMq5zmWLgMvuzKYUhLmYKCMRsHfjP5vjwu1cK7HqPodF"
+			]
+		},
+		"lib/openzeppelin-contracts/contracts/interfaces/IERC20.sol": {
+			"keccak256": "0x75a6c32b80c199339bde8fcd7b88521453afb54e17cadb9b2d767bf1f0b80402",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://85cb97a0c604aa1b7a1b391e65e0a403076802cfa81cd6cb9ec71605d8f40b6f",
+				"dweb:/ipfs/QmPgYGonx8e7Xsbf6zSCHQmAqyR1G9mwZAVNgiHV8FL1cn"
+			]
+		},
+		"lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol": {
+			"keccak256": "0x2a67691f431a6e5eeae9012a19c82ceef113b43cd68435911dec83da57b9d407",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://29aae0becfbae61a9dd9452f989f58ce843060af89ef5aeb01e7122c4e8b7475",
+				"dweb:/ipfs/QmPaGNM5zCMkJKGm2dKrivwEegwfN7kQw9E7RvMgKbxrqj"
+			]
+		},
+		"lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol": {
+			"keccak256": "0x0256a4ec2d817b06d957ec6aaf6db3e6dcc850fa08f01f50b5225d2dd3295ca3",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6cbbce88570f21ade526dc001d79ea2d0cf3577401b9a53d8c67d3c0b6632bf7",
+				"dweb:/ipfs/Qmep6wMttm3S2WswA1wUiFMX6rw4Mt59daQdqpZosdmcYh"
+			]
+		}
+	},
+	"version": 1
+}

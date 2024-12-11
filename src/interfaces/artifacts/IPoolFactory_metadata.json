@@ -1,0 +1,91 @@
+{
+	"compiler": {
+		"version": "0.8.25+commit.b61c2a91"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					}
+				],
+				"name": "createPool",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "pool",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getDeployData",
+				"outputs": [
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "master",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contract_meme_hub_wen/contracts/interfaces/IPoolFactory.sol": "IPoolFactory"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contract_meme_hub_wen/contracts/interfaces/IPoolFactory.sol": {
+			"keccak256": "0xd55f57c6ce63fd5ec68fef1ef834131ffffd05570e8cbfe2eaab5dcbca5b7745",
+			"license": "UNLICENSED",
+			"urls": [
+				"bzz-raw://786bdae8f137a1b5d5c61ad4f3b6120a9037ad54ce149c5cad3cf3f45fd77f30",
+				"dweb:/ipfs/QmbBpYjE5HZeVF6kjEHQbXY62mmxB46Rc4Dw42ZMDQJaoL"
+			]
+		}
+	},
+	"version": 1
+}

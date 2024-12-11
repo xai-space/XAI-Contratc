@@ -1,0 +1,153 @@
+{
+	"deploy": {
+		"VM:-": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"main:1": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"ropsten:3": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"rinkeby:4": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"kovan:42": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"goerli:5": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"Custom": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		}
+	},
+	"data": {
+		"bytecode": {
+			"functionDebugData": {},
+			"generatedSources": [],
+			"linkReferences": {},
+			"object": "",
+			"opcodes": "",
+			"sourceMap": ""
+		},
+		"deployedBytecode": {
+			"functionDebugData": {},
+			"generatedSources": [],
+			"immutableReferences": {},
+			"linkReferences": {},
+			"object": "",
+			"opcodes": "",
+			"sourceMap": ""
+		},
+		"gasEstimates": null,
+		"methodIdentifiers": {
+			"createDistribution((bool,uint40,uint40,uint40,uint40,bytes32,bytes32),(address,uint176,uint64,bool,bool))": "363621f2",
+			"recommendAmount()": "e44cec7c"
+		}
+	},
+	"abi": [
+		{
+			"inputs": [
+				{
+					"components": [
+						{
+							"internalType": "bool",
+							"name": "isDistribution",
+							"type": "bool"
+						},
+						{
+							"internalType": "uint40",
+							"name": "distributionRatioKol",
+							"type": "uint40"
+						},
+						{
+							"internalType": "uint40",
+							"name": "distributionRatioCommunity",
+							"type": "uint40"
+						},
+						{
+							"internalType": "uint40",
+							"name": "walletCountKol",
+							"type": "uint40"
+						},
+						{
+							"internalType": "uint40",
+							"name": "walletCountCommunity",
+							"type": "uint40"
+						},
+						{
+							"internalType": "bytes32",
+							"name": "merkleRootKol",
+							"type": "bytes32"
+						},
+						{
+							"internalType": "bytes32",
+							"name": "merkleRootCommunity",
+							"type": "bytes32"
+						}
+					],
+					"internalType": "struct I_Distributor.DistributionParams",
+					"name": "dp",
+					"type": "tuple"
+				},
+				{
+					"components": [
+						{
+							"internalType": "address",
+							"name": "token",
+							"type": "address"
+						},
+						{
+							"internalType": "uint176",
+							"name": "supply",
+							"type": "uint176"
+						},
+						{
+							"internalType": "uint64",
+							"name": "startTime",
+							"type": "uint64"
+						},
+						{
+							"internalType": "bool",
+							"name": "isKol",
+							"type": "bool"
+						},
+						{
+							"internalType": "bool",
+							"name": "isCommunity",
+							"type": "bool"
+						}
+					],
+					"internalType": "struct I_Distributor.TokenParam",
+					"name": "tp",
+					"type": "tuple"
+				}
+			],
+			"name": "createDistribution",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "recommendAmount",
+			"outputs": [
+				{
+					"internalType": "uint256",
+					"name": "",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		}
+	]
+}

@@ -1,0 +1,70 @@
+{
+	"compiler": {
+		"version": "0.8.25+commit.b61c2a91"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					}
+				],
+				"name": "isPregradRestricted",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contract_meme_hub_wen/contracts/interfaces/IMEMEHUB_ExternalEntities.sol": "IMEMEHUB_ExternalEntities"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contract_meme_hub_wen/contracts/interfaces/IMEMEHUB_ExternalEntities.sol": {
+			"keccak256": "0x01ac8a9130798f4fbbdf82bcbb28274507d1457ce5e9abe7b5759baab56d0130",
+			"license": "BUSL-1.1",
+			"urls": [
+				"bzz-raw://41332d8c8d407971aace761b1bc3c2dded29c07cff889d9133c2cdde15297080",
+				"dweb:/ipfs/QmQG9GaFFxHkD4P1Ee8nh3gKcwzbpLn7Zkopg2b1SrPpds"
+			]
+		}
+	},
+	"version": 1
+}

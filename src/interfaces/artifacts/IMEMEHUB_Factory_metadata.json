@@ -1,0 +1,98 @@
+{
+	"compiler": {
+		"version": "0.8.25+commit.b61c2a91"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string[]",
+						"name": "_infos",
+						"type": "string[]"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "_paras",
+						"type": "uint256[]"
+					},
+					{
+						"internalType": "address",
+						"name": "_creator",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_totalSupply",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "_bond",
+						"type": "address"
+					}
+				],
+				"name": "create",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "versions",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contract_meme_hub_wen/contracts/interfaces/IMEMEHUB_Factory.sol": "IMEMEHUB_Factory"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contract_meme_hub_wen/contracts/interfaces/IMEMEHUB_Factory.sol": {
+			"keccak256": "0x1ca800b80dd3343be9d8b7328706337094506f7a416a281955e4f4327811c939",
+			"license": "BUSL-1.1",
+			"urls": [
+				"bzz-raw://3bb2dee65447a2f13cf1470595127b7e7c5237d91423c3c6cfb3bc81ff357ac7",
+				"dweb:/ipfs/QmQSqRzQQMFDf2gsQLB2TJ3gH7MRoZvdLMkbMJCAxp1itp"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,1461 @@
+{
+	"compiler": {
+		"version": "0.8.19+commit.7dd6d404"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					}
+				],
+				"name": "OwnableInvalidOwner",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "OwnableUnauthorizedAccount",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "_AlreadyGraduated",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "_CallerNotEOA",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "_DeadlineExceeded",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "_FeeTooHigh",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "_InsufficientOutput",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "_InvalidAmountIn",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "_InvalidParamsReferrers",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "_InvalidSell",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "_InvalidToken",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "_NoOwner",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "_TooMuchMcap",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "sender",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "reserveETH",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "reserveToken",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amountIn",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amountOut",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "time",
+						"type": "uint256"
+					}
+				],
+				"name": "ContinuousBurn",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "sender",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "reserveETH",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "reserveToken",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amountIn",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amountOut",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "time",
+						"type": "uint256"
+					}
+				],
+				"name": "ContinuousMint",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "flag",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "version",
+						"type": "string"
+					}
+				],
+				"name": "ContractDeploy",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "maxSupply",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "totalSupply",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "initPrice",
+						"type": "uint256"
+					}
+				],
+				"name": "DeployToken",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "previousOwner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "OwnershipTransferred",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "referrer",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "flag",
+						"type": "uint256"
+					}
+				],
+				"name": "Referrer",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "headmaster",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amountToken",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amountETH",
+						"type": "uint256"
+					}
+				],
+				"name": "TokenGraduated",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "FEE_DENOMINATOR",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "K_",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "MAX_FEE",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "ZERO_ADDRESS",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "addPoolETHAmount_",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amountIn",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amountOutMin",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "deadline",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address[]",
+						"name": "referrers",
+						"type": "address[]"
+					}
+				],
+				"name": "burn",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "amountOut",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amountIn",
+						"type": "uint256"
+					}
+				],
+				"name": "calcAmountOutFromEth",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "amountOut",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amountIn",
+						"type": "uint256"
+					}
+				],
+				"name": "calcAmountOutFromToken",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "amountOut",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amountIn",
+						"type": "uint256"
+					}
+				],
+				"name": "calcAmountOutFromTokenCutOff",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "amountOut",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "initAmountIn",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address[]",
+						"name": "referrers",
+						"type": "address[]"
+					},
+					{
+						"internalType": "string[]",
+						"name": "_infos",
+						"type": "string[]"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "_params",
+						"type": "uint256[]"
+					}
+				],
+				"name": "createToken",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amountOut",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "creationFee_",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "factory_",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "feeRate_",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "feeTo_",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getMaxSupply",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address[]",
+						"name": "tokens",
+						"type": "address[]"
+					}
+				],
+				"name": "getPool",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "k",
+								"type": "uint256"
+							},
+							{
+								"internalType": "address",
+								"name": "token",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "tokenReserve",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "virtualTokenReserve",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "ethReserve",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "virtualEthReserve",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "addPoolETHAmount",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "graduationThreshold",
+								"type": "uint256"
+							},
+							{
+								"internalType": "address",
+								"name": "creator",
+								"type": "address"
+							},
+							{
+								"internalType": "address",
+								"name": "headmaster",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "maxSupply",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "initVirtualEthReserve",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct _BondingCurve.Pool[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "graduationThreshold_",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "headmaster_",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "initVirtualEthReserve_",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "initVirtualTokenReserve_",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "isAdmin",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "maxBuy_",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "maxSupply_",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amountIn",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amountOutMin",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "deadline",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address[]",
+						"name": "referrers",
+						"type": "address[]"
+					}
+				],
+				"name": "mint",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "amountOut",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "pools_",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "k",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "tokenReserve",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "virtualTokenReserve",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "ethReserve",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "virtualEthReserve",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "addPoolETHAmount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "graduationThreshold",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "creator",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "headmaster",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "maxSupply",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "initVirtualEthReserve",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "recommendFee_",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "recommend_",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "renounceOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_value",
+						"type": "uint256"
+					}
+				],
+				"name": "rescueETH",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_token",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_addPoolETHAmount",
+						"type": "uint256"
+					}
+				],
+				"name": "setAddPoolETHAmountOfToken",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_addPoolETHAmount",
+						"type": "uint256"
+					}
+				],
+				"name": "setAddPoolETHAmounts",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_admin",
+						"type": "address"
+					},
+					{
+						"internalType": "bool",
+						"name": "_status",
+						"type": "bool"
+					}
+				],
+				"name": "setAdmin",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_fee",
+						"type": "uint256"
+					}
+				],
+				"name": "setCreationFee",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_factory",
+						"type": "address"
+					}
+				],
+				"name": "setFactory",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_feeRate",
+						"type": "uint256"
+					}
+				],
+				"name": "setFeeRate",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_feeTo",
+						"type": "address"
+					}
+				],
+				"name": "setFeeTo",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_headmaster",
+						"type": "address"
+					}
+				],
+				"name": "setHeadmaster",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_maxBuy",
+						"type": "uint256"
+					}
+				],
+				"name": "setMaxBuy",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_maxSupply",
+						"type": "uint256"
+					}
+				],
+				"name": "setMaxSupply",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_initVirtualEthReserve",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_initVirtualTokenReserve",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_addPoolETHAmount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_maxSupply",
+						"type": "uint256"
+					}
+				],
+				"name": "setNewBond",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_totalSupply",
+						"type": "uint256"
+					}
+				],
+				"name": "setTotalSupply",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "totalSupply_",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "transferOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "_recommendFee",
+						"type": "uint256[]"
+					}
+				],
+				"name": "updateRecommedFee",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "versions",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "withdraw",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "withdrawtoken",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
+			}
+		],
+		"devdoc": {
+			"errors": {
+				"OwnableInvalidOwner(address)": [
+					{
+						"details": "The owner is not a valid owner account. (eg. `address(0)`)"
+					}
+				],
+				"OwnableUnauthorizedAccount(address)": [
+					{
+						"details": "The caller account is not authorized to perform an operation."
+					}
+				]
+			},
+			"kind": "dev",
+			"methods": {
+				"burn(address,uint256,uint256,address,uint256,address[])": {
+					"details": "Swaps tokens for ETH.",
+					"params": {
+						"amountIn": "Input amount of token.",
+						"amountOutMin": "Minimum output amount of ETH.",
+						"deadline": "Deadline for the swap.",
+						"to": "Recipient of ETH.",
+						"token": "The token to swap."
+					},
+					"returns": {
+						"amountOut": "The actual output amount of ETH."
+					}
+				},
+				"calcAmountOutFromEth(address,uint256)": {
+					"details": "Calculates the expected output amount of token given an input amount of ETH.",
+					"params": {
+						"amountIn": "Input amount of ETH.",
+						"token": "The token to swap."
+					},
+					"returns": {
+						"amountOut": "The expected output amount of token."
+					}
+				},
+				"calcAmountOutFromToken(address,uint256)": {
+					"details": "Calculates the expected output amount of ETH given an input amount of token.",
+					"params": {
+						"amountIn": "Input amount of token.",
+						"token": "The token to swap."
+					},
+					"returns": {
+						"amountOut": "The expected output amount of ETH."
+					}
+				},
+				"calcAmountOutFromTokenCutOff(address,uint256)": {
+					"details": "Calculates the expected output amount of ETH given an input amount of token To accommodate truncated transactions.",
+					"params": {
+						"amountIn": "Input amount of token.",
+						"token": "The token to swap."
+					},
+					"returns": {
+						"amountOut": "The expected output amount of ETH."
+					}
+				},
+				"mint(address,uint256,uint256,address,uint256,address[])": {
+					"details": "Swaps tokens for ETH.",
+					"params": {
+						"amountIn": "Input amount of ETH.",
+						"amountOutMin": "Minimum output amount of token.",
+						"deadline": "Deadline for the swap.",
+						"to": "Recipient of token.",
+						"token": "The token to swap."
+					},
+					"returns": {
+						"amountOut": "The actual output amount of token."
+					}
+				},
+				"owner()": {
+					"details": "Returns the address of the current owner."
+				},
+				"renounceOwnership()": {
+					"details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby disabling any functionality that is only available to the owner."
+				},
+				"transferOwnership(address)": {
+					"details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+				}
+			},
+			"title": "_BondingCurveThe  protocol singleton AMM with a custom bonding curve built-in.",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"src/_BondingCurve.sol": "_BondingCurve"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"lib/openzeppelin-contracts/contracts/access/Ownable.sol": {
+			"keccak256": "0x27c59ec88f0350d3d28d222a078e11bda664b955e012fe9a74962bf10c936209",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c3a300244e864b1362aea21080840ba1e4bc8dba7bcf21fe2dc4348b60d6b0d5",
+				"dweb:/ipfs/QmV1L6ium91zyYCuxisumGnMVsQcNPQryaVp7t8aKgYGor"
+			]
+		},
+		"lib/openzeppelin-contracts/contracts/interfaces/draft-IERC6093.sol": {
+			"keccak256": "0xdef64bb44aa222a632814704c59a6a5ceb4ea8ef5216749b17c73c3aa1cde00c",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://f27ae1402a37e955103e938d769d76339a6968acb482e0e80d455767e533edd6",
+				"dweb:/ipfs/QmTWPEMKMP7MujrfsZTFBm2voSzxJ6zkV32S4GJM4iwvKi"
+			]
+		},
+		"lib/openzeppelin-contracts/contracts/token/ERC20/ERC20.sol": {
+			"keccak256": "0xf758f03f984e2e493fa46454a553acd2f2f19e23beb7aeb77423a16548c7a127",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://354e6443e672cd37292756a5007c881f94d94c2436ef863c0678759b0488d2c1",
+				"dweb:/ipfs/QmQuDQAePWXF3WCzZoXLMVoVPubuskc2fG3DbARs6dGJRn"
+			]
+		},
+		"lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol": {
+			"keccak256": "0x2a67691f431a6e5eeae9012a19c82ceef113b43cd68435911dec83da57b9d407",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://29aae0becfbae61a9dd9452f989f58ce843060af89ef5aeb01e7122c4e8b7475",
+				"dweb:/ipfs/QmPaGNM5zCMkJKGm2dKrivwEegwfN7kQw9E7RvMgKbxrqj"
+			]
+		},
+		"lib/openzeppelin-contracts/contracts/token/ERC20/extensions/IERC20Metadata.sol": {
+			"keccak256": "0x7ec16fe73a675b22572684bfa0f108050eb259cec3110f556f0ae9edb69d7cd6",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://810c3948142e0049c7a67b22220c976e266c782de2d2d4ca0a36d9041aaa15a4",
+				"dweb:/ipfs/QmTLmHzCQhgdKrTyABwiLRHkKaAZMBi6oMzpAuxkqFnq2G"
+			]
+		},
+		"lib/openzeppelin-contracts/contracts/utils/Context.sol": {
+			"keccak256": "0x3aa312348f02eb2c6f71dd936583ec09761a5d25e5f7448217e2cd7739f595df",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://ff75375a8b4207936052eb480b280004619ea67e9b6d64c5dcc8b7adc0d67687",
+				"dweb:/ipfs/QmeJiGKLGYeS1Yyr8KqySNow3ykHfvwJc9wx5J44s33J1A"
+			]
+		},
+		"lib/solady-main/src/utils/FixedPointMathLib.sol": {
+			"keccak256": "0xdbc49c04fd5a386c835e72ac4a77507e59d7a7c58290655b4cff2c4152fd4f65",
+			"license": "AGPL-3.0-only",
+			"urls": [
+				"bzz-raw://103d3a287a93dad2907bb42d7b3493f7f3176c561dacd2a0185ac6d900ed4577",
+				"dweb:/ipfs/QmTzdyJy6CMKYwNPGNTNPsfHEuzsoGQyJRdoYFjuCwamCh"
+			]
+		},
+		"lib/solady-main/src/utils/ReentrancyGuard.sol": {
+			"keccak256": "0x47c87df518aa91c1e645c2e695721fb9f18f071060c6af4e8c9a26171523ec7a",
+			"license": "AGPL-3.0-only",
+			"urls": [
+				"bzz-raw://0f446df9bb6b3e74373d13c21e5925d2d90f482964c2f1ecc004957686a3272b",
+				"dweb:/ipfs/Qmb9tiTqLPFPAXeJHMMdFYaH1L5Mzuf7Rf7FFdQ1YQ338o"
+			]
+		},
+		"lib/solady-main/src/utils/SafeTransferLib.sol": {
+			"keccak256": "0xf972ba1ca050015699337f0d83e004ee09634d40a0d2f176bf45e09b3171cca2",
+			"license": "AGPL-3.0-only",
+			"urls": [
+				"bzz-raw://d1e0e5790b9d376636a66cb8f3119d72e86cbb04e20131bcfdb9967d2a1f9295",
+				"dweb:/ipfs/QmfZfoGsfBoTfwCXX6NwFUoXc2EiPf1HiNKGKH783L55oS"
+			]
+		},
+		"src/_BondingCurve.sol": {
+			"keccak256": "0x3a16f6001c91cf08c7ad736dbd6f4ac1099e395c81ade0f7d6478d1a74b16c04",
+			"license": "BUSL-1.1",
+			"urls": [
+				"bzz-raw://19460c434212dc5219d4a90f3a8e57ab12de59b39de2604d82f473ad28d3f3b8",
+				"dweb:/ipfs/QmXZt1ttvytT865ntpmpLkWVvzp9BW5wEa2QvKZ828B4yA"
+			]
+		},
+		"src/interfaces/IERC20.sol": {
+			"keccak256": "0x29b810492e893b40c64064490d4ef39a66649c6b968df34a5295ebba074ee700",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://71b1217236e95b850930abc4651ddeb98327943ff962db444a11ea5531bd6417",
+				"dweb:/ipfs/QmfLgaM9tRFkJYCNoefQd7YDbx7sdEdUmphgtw6nEg8VRs"
+			]
+		},
+		"src/interfaces/I_Factory.sol": {
+			"keccak256": "0x51ba03549ce67d0b246c4533ec31d997ce7e8d59ff2d7094f5c687eee9b0b00b",
+			"license": "BUSL-1.1",
+			"urls": [
+				"bzz-raw://a1d3f0a00acc7ebebfb7b9333ac775e41f2a919ef4b9d1356e051d1f4ef14555",
+				"dweb:/ipfs/Qmdy9sonhhdyyJwjoju1HCueGV3pmKPkatqVeGfbj9p5se"
+			]
+		},
+		"src/interfaces/I_Master.sol": {
+			"keccak256": "0x508aa33000136ffeed5871d8ca5b0c4d1ab105093d5029782c37c011787ca16e",
+			"license": "BUSL-1.1",
+			"urls": [
+				"bzz-raw://0237543c21eb69b0b91d657b0559b91e7d611225217cdbaa523ee4e46df11409",
+				"dweb:/ipfs/QmVEmt9x6W4hBe5QaNjMXXn8MLqRkqsPSeaSSdfYgMj7rf"
+			]
+		},
+		"src/interfaces/I_Recommend.sol": {
+			"keccak256": "0x97992cda1e3b8c64de12042b1514dc30f9d08dc2610681b1b7a3c5bfab9af28d",
+			"license": "BUSL-1.1",
+			"urls": [
+				"bzz-raw://a9687742eae2e574575ac5b8e88bb923db60648b11a24a72fef9a723ebc3aea7",
+				"dweb:/ipfs/QmZuMg49okpnXEEjhvdun3PxTvaKmebXtV2zfRje4HJEZ2"
+			]
+		},
+		"src/interfaces/I_Token.sol": {
+			"keccak256": "0xdb194c22c2b21ce8d4b66d443332205f154eebd48d267ce99031710fd8f23105",
+			"license": "BUSL-1.1",
+			"urls": [
+				"bzz-raw://7c24b9a128fa9e644dbfcf70ec7f4519952ae208368a98d9d32662ce214282cf",
+				"dweb:/ipfs/Qme1gRnQxFTLMmpzvvE3UcytuF3e5P6FkqNeeaqMmyVRXH"
+			]
+		}
+	},
+	"version": 1
+}

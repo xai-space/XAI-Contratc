@@ -1,0 +1,70 @@
+{
+	"compiler": {
+		"version": "0.8.19+commit.7dd6d404"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					}
+				],
+				"name": "isPregradRestricted",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"src/interfaces/I_ExternalEntities.sol": "I_ExternalEntities"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"src/interfaces/I_ExternalEntities.sol": {
+			"keccak256": "0x12f05a434b5c9d9e7ce171622c6fcf7ad574f30faca43dea8f84663893e53398",
+			"license": "BUSL-1.1",
+			"urls": [
+				"bzz-raw://4644cb5a4f5eed8a58682e404c7395c1fe2a949079733fe495b1de2c5f9f2372",
+				"dweb:/ipfs/QmUMtjhYcCm59aXRdSdU2QB5nk9DDMkF7HyKRzfSRJ1sMA"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,93 @@
+{
+	"compiler": {
+		"version": "0.8.25+commit.b61c2a91"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amountToken",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amountEth",
+						"type": "uint256"
+					}
+				],
+				"name": "execute",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "_amountToken",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_amountETH",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "versions",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"bera memehub/contract_meme_hub_wen/contracts/interfaces/IMEMEHUB_Master.sol": "IMEMEHUB_Master"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"bera memehub/contract_meme_hub_wen/contracts/interfaces/IMEMEHUB_Master.sol": {
+			"keccak256": "0x015447c18d168b783c73ea67ef7fb0ef5f6c836a668d6d7c49eeb44b234cfe86",
+			"license": "BUSL-1.1",
+			"urls": [
+				"bzz-raw://6e78a118cf58398d915bbb76b29688c339a44526ad3e4ba0ece7081afa880f78",
+				"dweb:/ipfs/Qmc6oG4QGY5bx7JkmXQFpE21wyzSj9fymREZgwAnxwKViB"
+			]
+		}
+	},
+	"version": 1
+}

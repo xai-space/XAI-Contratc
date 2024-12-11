@@ -1,0 +1,67 @@
+{
+	"compiler": {
+		"version": "0.8.20+commit.a1b79de6"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "MerkleProofInvalidMultiproof",
+				"type": "error"
+			}
+		],
+		"devdoc": {
+			"details": "These functions deal with verification of Merkle Tree proofs. The tree and the proofs can be generated using our https://github.com/OpenZeppelin/merkle-tree[JavaScript library]. You will find a quickstart guide in the readme. WARNING: You should avoid using leaf values that are 64 bytes long prior to hashing, or use a hash function other than keccak256 for hashing leaves. This is because the concatenation of a sorted pair of internal nodes in the Merkle tree could be reinterpreted as a leaf value. OpenZeppelin's JavaScript library generates Merkle trees that are safe against this attack out of the box. IMPORTANT: Consider memory side-effects when using custom hashing functions that access memory in an unsafe way. NOTE: This library supports proof verification for merkle trees built using custom _commutative_ hashing functions (i.e. `H(a, b) == H(b, a)`). Proving leaf inclusion in trees built using non-commutative hashing functions requires additional logic that is not supported by this library.",
+			"errors": {
+				"MerkleProofInvalidMultiproof()": [
+					{
+						"details": "The multiproof provided is not valid."
+					}
+				]
+			},
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"lib/openzeppelin-contracts/contracts/utils/cryptography/MerkleProof.sol": "MerkleProof"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"lib/openzeppelin-contracts/contracts/utils/cryptography/Hashes.sol": {
+			"keccak256": "0x631dc1958d5308bd2d9f91190bbcde4f9ffb9d9401ce8d358c17b35f1a942bb7",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://e7ef16d9a6f57eae9ab275116eaba1e8de70efd3d0e3682b1585b8f069d9c3f9",
+				"dweb:/ipfs/QmR3JQHAyv4sNWnRHeiC6oaz8Bqn8rtzu5sdAqAJRtBqpj"
+			]
+		},
+		"lib/openzeppelin-contracts/contracts/utils/cryptography/MerkleProof.sol": {
+			"keccak256": "0x1b7bd617dae7dc8d429d4c6a2441fdf57ebff1f4f95490cf2338e1b6f72e1094",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7136d92c089af874fe7183009c4eb8133656eb9e3bd4b7e401fdb46d3554c770",
+				"dweb:/ipfs/QmfAcV1XcG4GvM7Xzf1Pzn2ApEL6GP186mVLT6RmUMcQaZ"
+			]
+		}
+	},
+	"version": 1
+}

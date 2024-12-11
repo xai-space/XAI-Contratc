@@ -1,0 +1,141 @@
+{
+	"compiler": {
+		"version": "0.8.19+commit.7dd6d404"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "bool",
+								"name": "isDistribution",
+								"type": "bool"
+							},
+							{
+								"internalType": "uint40",
+								"name": "distributionRatioKol",
+								"type": "uint40"
+							},
+							{
+								"internalType": "uint40",
+								"name": "distributionRatioCommunity",
+								"type": "uint40"
+							},
+							{
+								"internalType": "uint40",
+								"name": "walletCountKol",
+								"type": "uint40"
+							},
+							{
+								"internalType": "uint40",
+								"name": "walletCountCommunity",
+								"type": "uint40"
+							},
+							{
+								"internalType": "bytes32",
+								"name": "merkleRootKol",
+								"type": "bytes32"
+							},
+							{
+								"internalType": "bytes32",
+								"name": "merkleRootCommunity",
+								"type": "bytes32"
+							}
+						],
+						"internalType": "struct I_Distributor.DistributionParams",
+						"name": "dp",
+						"type": "tuple"
+					},
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "token",
+								"type": "address"
+							},
+							{
+								"internalType": "uint176",
+								"name": "supply",
+								"type": "uint176"
+							},
+							{
+								"internalType": "uint64",
+								"name": "startTime",
+								"type": "uint64"
+							},
+							{
+								"internalType": "bool",
+								"name": "isKol",
+								"type": "bool"
+							},
+							{
+								"internalType": "bool",
+								"name": "isCommunity",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct I_Distributor.TokenParam",
+						"name": "tp",
+						"type": "tuple"
+					}
+				],
+				"name": "createDistribution",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "recommendAmount",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"src/interfaces/I_Distributor.sol": "I_Distributor"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"src/interfaces/I_Distributor.sol": {
+			"keccak256": "0x4e7d1f99f05625916ef7a59d3ee0dd174d07c57447eeaf9de723544c9fbca9ad",
+			"license": "BUSL-1.1",
+			"urls": [
+				"bzz-raw://c35b338493412c3687f9241f5dd0dd4fffae4e4a7e72f7168549b29b65afb6ec",
+				"dweb:/ipfs/QmZ9VNmcH4pp7Vik9FvDz4yN31yxxBTVALiPmmjSAGHZq7"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,422 @@
+{
+	"compiler": {
+		"version": "0.8.19+commit.7dd6d404"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_weth",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_factory",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_Master",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					}
+				],
+				"name": "OwnableInvalidOwner",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "OwnableUnauthorizedAccount",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "_NoOwner",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "previousOwner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "OwnershipTransferred",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "Master",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "factory",
+						"type": "address"
+					}
+				],
+				"name": "addFactory",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					}
+				],
+				"name": "addPregradRestricted",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "isAdmin",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					}
+				],
+				"name": "isPregradRestricted",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "knownFactories",
+				"outputs": [
+					{
+						"internalType": "contract IUniswapV2Factory",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "pregradRestricted",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "factory",
+						"type": "address"
+					}
+				],
+				"name": "removeFactory",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					}
+				],
+				"name": "removePregradRestricted",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "renounceOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_admin",
+						"type": "address"
+					},
+					{
+						"internalType": "bool",
+						"name": "_status",
+						"type": "bool"
+					}
+				],
+				"name": "setAdmin",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_weth",
+						"type": "address"
+					}
+				],
+				"name": "setWeth",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "transferOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "weth",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"errors": {
+				"OwnableInvalidOwner(address)": [
+					{
+						"details": "The owner is not a valid owner account. (eg. `address(0)`)"
+					}
+				],
+				"OwnableUnauthorizedAccount(address)": [
+					{
+						"details": "The caller account is not authorized to perform an operation."
+					}
+				]
+			},
+			"kind": "dev",
+			"methods": {
+				"owner()": {
+					"details": "Returns the address of the current owner."
+				},
+				"renounceOwnership()": {
+					"details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby disabling any functionality that is only available to the owner."
+				},
+				"transferOwnership(address)": {
+					"details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"src/_ExternalEntities.sol": "_ExternalEntities"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"lib/openzeppelin-contracts/contracts/access/Ownable.sol": {
+			"keccak256": "0x27c59ec88f0350d3d28d222a078e11bda664b955e012fe9a74962bf10c936209",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c3a300244e864b1362aea21080840ba1e4bc8dba7bcf21fe2dc4348b60d6b0d5",
+				"dweb:/ipfs/QmV1L6ium91zyYCuxisumGnMVsQcNPQryaVp7t8aKgYGor"
+			]
+		},
+		"lib/openzeppelin-contracts/contracts/interfaces/draft-IERC6093.sol": {
+			"keccak256": "0xdef64bb44aa222a632814704c59a6a5ceb4ea8ef5216749b17c73c3aa1cde00c",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://f27ae1402a37e955103e938d769d76339a6968acb482e0e80d455767e533edd6",
+				"dweb:/ipfs/QmTWPEMKMP7MujrfsZTFBm2voSzxJ6zkV32S4GJM4iwvKi"
+			]
+		},
+		"lib/openzeppelin-contracts/contracts/token/ERC20/ERC20.sol": {
+			"keccak256": "0xf758f03f984e2e493fa46454a553acd2f2f19e23beb7aeb77423a16548c7a127",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://354e6443e672cd37292756a5007c881f94d94c2436ef863c0678759b0488d2c1",
+				"dweb:/ipfs/QmQuDQAePWXF3WCzZoXLMVoVPubuskc2fG3DbARs6dGJRn"
+			]
+		},
+		"lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol": {
+			"keccak256": "0x2a67691f431a6e5eeae9012a19c82ceef113b43cd68435911dec83da57b9d407",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://29aae0becfbae61a9dd9452f989f58ce843060af89ef5aeb01e7122c4e8b7475",
+				"dweb:/ipfs/QmPaGNM5zCMkJKGm2dKrivwEegwfN7kQw9E7RvMgKbxrqj"
+			]
+		},
+		"lib/openzeppelin-contracts/contracts/token/ERC20/extensions/IERC20Metadata.sol": {
+			"keccak256": "0x7ec16fe73a675b22572684bfa0f108050eb259cec3110f556f0ae9edb69d7cd6",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://810c3948142e0049c7a67b22220c976e266c782de2d2d4ca0a36d9041aaa15a4",
+				"dweb:/ipfs/QmTLmHzCQhgdKrTyABwiLRHkKaAZMBi6oMzpAuxkqFnq2G"
+			]
+		},
+		"lib/openzeppelin-contracts/contracts/utils/Context.sol": {
+			"keccak256": "0x3aa312348f02eb2c6f71dd936583ec09761a5d25e5f7448217e2cd7739f595df",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://ff75375a8b4207936052eb480b280004619ea67e9b6d64c5dcc8b7adc0d67687",
+				"dweb:/ipfs/QmeJiGKLGYeS1Yyr8KqySNow3ykHfvwJc9wx5J44s33J1A"
+			]
+		},
+		"src/_ExternalEntities.sol": {
+			"keccak256": "0x4ba4800fc1c2991b2f48867838135d11e80ab939f0ca999ff3031659383fb5b4",
+			"license": "UNLICENSED",
+			"urls": [
+				"bzz-raw://80c3da03c80c363a8c2f0a60cbbc928661c9a996187ef8603aefc86d48602cb8",
+				"dweb:/ipfs/QmU8rR9VZhjRaDVpWpXv6giB28FAA56XEVrEGzVzpVL3r4"
+			]
+		},
+		"src/interfaces/IUniswapV2Factory.sol": {
+			"keccak256": "0x29010337f1ed91b89e67aaf48a9e8774489db3c5154aca6103520d8bd0260135",
+			"license": "UNLICENSED",
+			"urls": [
+				"bzz-raw://bfe7e7c8403a2b388df874afd336bbf16275c0f1792d28f4c5e7e93502a6ea40",
+				"dweb:/ipfs/QmXfJodUBVbqR6c7WE2qCrn6UVjQPQPKRWVk1jSabttjUX"
+			]
+		},
+		"src/interfaces/I_Master.sol": {
+			"keccak256": "0x508aa33000136ffeed5871d8ca5b0c4d1ab105093d5029782c37c011787ca16e",
+			"license": "BUSL-1.1",
+			"urls": [
+				"bzz-raw://0237543c21eb69b0b91d657b0559b91e7d611225217cdbaa523ee4e46df11409",
+				"dweb:/ipfs/QmVEmt9x6W4hBe5QaNjMXXn8MLqRkqsPSeaSSdfYgMj7rf"
+			]
+		}
+	},
+	"version": 1
+}

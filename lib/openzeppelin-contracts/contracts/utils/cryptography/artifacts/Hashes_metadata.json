@@ -1,0 +1,46 @@
+{
+	"compiler": {
+		"version": "0.8.19+commit.7dd6d404"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"details": "Library of standard hash functions. _Available since v5.1._",
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"lib/openzeppelin-contracts/contracts/utils/cryptography/Hashes.sol": "Hashes"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"lib/openzeppelin-contracts/contracts/utils/cryptography/Hashes.sol": {
+			"keccak256": "0xfaec0e1bcd941edd2583aee02deff2b0a67e3db774e1fa7c1e16516cac8be739",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6dc8f867ff4b17e2d70b9e29c60cf5ba79d127fc39f38472a7d27c45ce21ce0f",
+				"dweb:/ipfs/QmWSdPtVCnN2cr4qPiJsF6mnm74cpGNHKbkeoBqd8dJDnS"
+			]
+		}
+	},
+	"version": 1
+}
